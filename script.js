@@ -49,10 +49,15 @@ submitBtn.addEventListener("click", (event) => {
             window.location.href = 'dashboard.html'; // Redirect here
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(`Error Code: ${errorCode}, Error Message: ${errorMessage}`);
-            msg1.innerText = `${errorMessage}`;
+            if (error.code === 'auth/user-not-found') {
+                msg1.innerText = 'User not found. Please sign up.';
+            } else if (error.code === 'auth/wrong-password') {
+                msg1.innerText = 'Incorrect password. Please try again.';
+            } else if (error.code === 'auth/invalid-email') {
+                msg1.innerText = 'Invalid email address.';
+            } else {
+                msg1.innerText = 'An unknown error occurred. Please try again.';
+            }
             msg1.style.color = "red";
             msg1.style.backgroundColor = "white";
         });
