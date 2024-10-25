@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="loginContainer w-2/5 h-auto rounded-xl flex flex-col items-center p-6 bg-white shadow-lg">
+        <i class="fa-solid fa-circle-user text-5xl"></i>
+        <div class="login w-full">
+
+            <h2 class="text-center text-2xl mb-6">Login</h2>
+            <input class="block w-full p-2 border border-gray-300 rounded m-2 bg-white placeholder-black focus:outline-none" id="email1" type="email" placeholder="Email *">
+            
+            <input class="block w-full p-2 border border-gray-300 rounded m-2 bg-white placeholder-black focus:outline-none" id="password1" type="password" placeholder="Password *">
+            <div class="block w-full p-2 m-2 rounded placeholder-black" id="msg1"></div>
+            <button class="block w-full p-2 bg-blue-500 text-white rounded m-2" id="submitBtn">Submit</button>
+            <span class="newAcct m-2 block text-center">Need an account?</span>
+            <button class="block w-full p-2 bg-blue-500 text-white rounded m-2" id="signUpBtn">Sign Up</button>
+        </div>
+        
+        <div class="signUp w-full mt-8 hidden">
+            <h1 class="text-center text-2xl mb-6">Create an Account</h1>
+            <input class="block w-full p-2 border border-gray-300 rounded m-2 bg-white placeholder-black focus:outline-none" id="email2" type="email" placeholder="Email *">
+            <input class="block w-full p-2 border border-gray-300 rounded m-2 bg-white placeholder-black focus:outline-none" id="confirmEmail2" type="email" placeholder="Confirm Email *">
+            <input class="block w-full p-2 border border-gray-300 rounded m-2 bg-white placeholder-black focus:outline-none" id="password2" type="password" placeholder="Password *">
+            <input class="block w-full p-2 border border-gray-300 rounded m-2 bg-white placeholder-black focus:outline-none" id="confirmPassword2" type="password" placeholder="Confirm Password *">
+            <div class="block w-full p-2 m-2 rounded placeholder-black" id="msg2"></div>
+            <button class="block w-full p-2 bg-blue-500 text-white rounded m-2" id="createAcctBtn">Create Account</button>
+            <button class="block w-full p-2 bg-blue-500 text-white rounded m-2" id="returnBtn">Return to Login</button>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+
+
+
+</html>

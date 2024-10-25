@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+         .custom-gradient-blue {
+    background: linear-gradient(to right, #A7C6ED, #6EC6F5);
+  }
+        
+    </style>
+</head>
+<body class=" bg-gray-100 min-h-screen ">
+    <h1 class="font-mono text-2xl p-3 shadow-xl rounded bg-white text-blue-400 text-center">KPI Dashboard</h1>
+    <div class="containers flex ">
+   
+        <div class="section-1 h-screen w-14 custom-gradient-blue p-4 "><a href="#"><i class="fa-solid fa-house text-white text-2xl"></i></a></div>
+        <div class="section2 h-screen w-8/12">
+            <div class="row1 flex h-1/3">
+                <div class="col11 w-1/3 h-full p-4 m-4   shadow-xl rounded-xl bg-white">
+                    <canvas id="chart2"></canvas>
+                </div>
+                <div class="col21 w-1/3 h-full p-4 m-4  shadow-xl rounded-xl bg-white">
+                    <canvas id="chart3"></canvas>
+                </div>
+                <div class="col31 w-1/3 h-full p-2 m-4 ">
+                    <div class="info1 h-1/2 mb-2 shadow-xl rounded-xl custom-gradient-blue text-white flex items-center justify-center text-3xl" id="userStats1">
+                        Users Online: 0
+                    </div>
+                    <div class="info2 h-1/2 mt-1 shadow-xl rounded-xl custom-gradient-blue text-white flex items-center justify-center text-3xl" id="userStats2">
+                        Total Users: 0
+                    </div>
+                </div>
+            </div>
+            <div class=" row2   mt-10 ml-4 mr-4 mb-3 border  shadow-xl rounded-xl bg-white">
+                <canvas id="chart1" width="900" height="200"></canvas>
+            </div>
+            <div class=" flex row3 h-2/3  ">
+                <div class="h-1/2 col13 w-1/2 p-4 m-4 custom-gradient-blue text-white flex items-center justify-center text-3xl rounded-xl" id="userStats3">
+                    New Signups Today: 0
+                </div>
+                <div class="h-1/2 col23 w-1/2 p-4 m-4 custom-gradient-blue text-white flex items-center justify-center text-3xl rounded-xl" id="userStats4">
+                    Active Sessions: 0
+                </div>
+            </div>
+        </div>
+        <div class="section3 h-screen w-3/12">
+            <div class="part1 h-96 p-4 m-4  shadow-xl  rounded-xl bg-white">
+                <canvas id="chart4" height="500" width="300" ></canvas>
+            </div>
+            <div class="part2 h-96 p-4 m-4  shadow-xl rounded-xl bg-white">
+                <canvas id="chart5" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+        <script src="dashboard.js"></script>
+    </div>
+</body>
+</html>
