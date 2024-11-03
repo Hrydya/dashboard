@@ -91,14 +91,7 @@ let chart4 = new Chart(ctx4, {
     },
     options: {
         responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true
-            },
-            x: {
-                beginAtZero: true
-            }
-        }
+       
     }
 });
 
